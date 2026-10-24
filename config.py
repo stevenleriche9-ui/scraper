@@ -8,6 +8,7 @@ DOSSIER_DATA = os.path.join(RACINE, "data")
 DOSSIER_IMAGES = os.path.join(DOSSIER_DATA, "image")
 FICHIER_RESULTATS = os.path.join(DOSSIER_DATA, "resultats.csv")
 FICHIER_CATEGORIES = os.path.join(DOSSIER_DATA, "resultat_categorie.csv")
+FICHIER_BASE = os.path.join(DOSSIER_DATA, "produits.db")
 PREFIXE_IMAGE = "imageproduit"
 SEPARATEUR_CSV = ";"
 
