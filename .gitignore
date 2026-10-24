@@ -4,4 +4,8 @@ __pycache__/
 .env
 data/*.csv
 data/image/*
-!data/image/.gitkeep
+base.sqlite3
+resultat_categorie.csv
+resultats.csv
+
+
