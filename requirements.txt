@@ -1,4 +1,2 @@
 # installation
 pip install selenium 
-pip install re 
-pip install 
