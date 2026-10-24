@@ -1,1 +1,4 @@
-selenium>=4.6
+# installation
+pip install selenium 
+pip install re 
+pip install 
