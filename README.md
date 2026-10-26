@@ -30,5 +30,4 @@ scraper_amazon/
 
 ## Notes
 - La pause se règle avec `PAUSE` dans `config.py`.
-- Si Amazon change son HTML, modifie seulement le dictionnaire `selecteur` dans `config.py`.
 - En cas de CAPTCHA, résous-le dans la fenêtre Chrome.

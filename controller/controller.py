@@ -19,7 +19,6 @@ def creer_dossier(chemin):
 
 
 def produit_en_ligne(p):
-    """Transforme un produit en liste de textes (une ligne du CSV)."""
     if p.prix is None:
         prix = ""
     else:
@@ -149,7 +148,7 @@ class Controleur:
             scraper.fermer()
             self.derniere_recherche = recherche
             nouveaux = self.ajouter(scraper.resultats)
-            if len(nouveaux) > 0:
+            if len(nouveaux) > 0:  
                 print("Téléchargement des images...")
                 telecharger_images(nouveaux)
                 self.sauvegarder()

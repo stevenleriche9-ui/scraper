@@ -45,7 +45,6 @@ def oui_non(question, defaut=False):
     return reponse == "o" or reponse == "oui" or reponse == "y" or reponse == "yes"
 
 
-# ---------------------------------------------------------------- parcourir les résultats
 def afficher_page(liste, numero, total):
     numero_produit = (numero - 1) * config.PRODUITS_PAR_ECRAN + 1
     for p in extraire_page(liste, numero):
@@ -78,7 +77,6 @@ def parcourir(ctrl):
             print("Choix impossible.")
 
 
-# ---------------------------------------------------------------- nouvelle recherche
 def nouvelle_recherche(ctrl):
     afficher_titre("NOUVELLE RECHERCHE")
     recherche = demander("Quel produit veux-tu scrapper ?")
@@ -106,7 +104,6 @@ def nouvelle_recherche(ctrl):
     print("  - image/")
 
 
-# ---------------------------------------------------------------- menu principal
 def lancer():
     ctrl = Controleur()
     while True:
