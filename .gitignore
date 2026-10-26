@@ -4,8 +4,7 @@ __pycache__/
 .env
 data/*.csv
 data/image/*
-base.sqlite3
+data/base.sqlite3
 resultat_categorie.csv
 resultats.csv
-
 

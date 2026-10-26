@@ -1,2 +1,1 @@
-# installation
-pip install selenium 
+selenium 
