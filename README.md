@@ -26,7 +26,7 @@ scraper_amazon/
 
 ## Fonctionnalités
 - Menu console : recherche et résultats paginés.
-- Seul filtre : un produit est gardé si son titre commence par, ou contient, ce que tu as saisi (sans tenir compte des majuscules).
+- Seul filtre : un produit est gardé si son titre commence par, ou contient, ce que tu as saisi .
 
 ## Notes
 - La pause se règle avec `PAUSE` dans `config.py`.
