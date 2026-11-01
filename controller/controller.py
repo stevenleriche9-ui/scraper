@@ -153,7 +153,7 @@ class Controleur:
                 telecharger_images(nouveaux)
                 self.sauvegarder()
         return len(nouveaux)
-
+    
     def ajouter(self, trouves):
         nouveaux = []
         for p in trouves:
