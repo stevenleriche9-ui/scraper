@@ -10,7 +10,6 @@ FICHIER_BASE = os.path.join(DOSSIER, "data", "base.sqlite3")
 
 
 def texte_en_prix(texte):
-    """'1299,99' -> 1299.99 ; texte vide -> None"""
     try:
         return float(texte.replace(",", "."))
     except ValueError:

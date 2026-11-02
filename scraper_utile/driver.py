@@ -7,7 +7,6 @@ import config
 
 
 def pause(minimum=config.PAUSE[0], maximum=config.PAUSE[1]):
-    """Pause aléatoire (3 à 9 secondes par défaut)."""
     time.sleep(random.uniform(minimum, maximum))
 
 
