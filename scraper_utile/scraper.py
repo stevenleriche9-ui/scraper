@@ -16,7 +16,6 @@ class ScraperAmazon:
         self.driver = None
         self.resultats = []   # les produits gardés (remplie au fur et à mesure)
 
-    # ------------------------------------------------------------ ouvrir / fermer Chrome
     def ouvrir(self):
         self.driver = creer_driver()
 
@@ -25,7 +24,6 @@ class ScraperAmazon:
             self.driver.quit()
             self.driver = None
 
-    # ------------------------------------------------------------ recherche
     def rechercher(self, recherche):
         self.driver.get(config.URL)
         pause()
@@ -36,7 +34,6 @@ class ScraperAmazon:
         barre.send_keys(Keys.ENTER)
         pause()
 
-    # ------------------------------------------------------------ lecture d'un produit
     def lire_carte(self, carte, categorie):
         """Lit une carte produit. Renvoie un Produit, ou None si on n'a pas trouvé de titre."""
         try:
@@ -61,7 +58,6 @@ class ScraperAmazon:
 
         return Produit(titre, nom_court(titre), prix, url_img, categorie)
 
-    # ------------------------------------------------------------ page suivante
     def page_suivante(self):
         """Clique sur 'Suivant'. Renvoie False s'il n'y a plus de page."""
         try:
@@ -78,15 +74,7 @@ class ScraperAmazon:
         pause()
         return True
 
-    # ------------------------------------------------------------ scraping complet
     def scraper(self, recherche, nb_pages=1, objectif=None):
-        """
-        recherche : ce que l'utilisateur a tapé
-        nb_pages  : nombre maximum de pages Amazon à parcourir
-        objectif  : on s'arrête dès qu'on a gardé ce nombre de produits (None = pas de limite)
-
-        Seul filtre : on garde un produit si son titre commence par, ou contient, la recherche.
-        """
         self.resultats = []
         deja_vus = []
         self.rechercher(recherche)
@@ -99,7 +87,7 @@ class ScraperAmazon:
             for carte in cartes:
                 self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", carte)
                 produit = self.lire_carte(carte, recherche)
-                pause()   # pause entre chaque produit
+                pause()  
 
                 if produit is None:
                     continue
