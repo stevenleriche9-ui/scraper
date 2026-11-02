@@ -113,7 +113,7 @@ def telecharger_images(produits):
             fichier.write(donnees)
             fichier.close()
         except Exception:
-            continue       # image impossible à télécharger : on passe à la suivante
+            continue
         p.image = nom_fichier
         numero = numero + 1
         nb_ok = nb_ok + 1
